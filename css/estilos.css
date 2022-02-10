@@ -1,0 +1,578 @@
+/*Estilos de la estructura general*/
+*{
+    padding: 0;
+    margin: 0;
+}
+
+
+.contenedor{
+    display: grid;
+}
+.header{
+    grid-area: header;
+}
+.main{
+    grid-area: main;
+}
+.aside{
+    grid-area: aside;
+}
+.footer{
+    grid-area: footer;
+}
+
+
+@media screen and (min-width: 1200px ){
+.contenedor{
+    grid-template-columns: 70% 30%;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "header header" "main aside" "footer footer" ;
+    grid-gap: 5px;
+}
+
+.header{
+    background-image: url("../imagenes/fondo.png");
+}
+
+.main{
+    background-color: white;
+    margin-left: 20px;
+    
+}
+
+.aside{
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(red, black);
+}
+
+.footer{
+    background-image: url("../imagenes/fondo.png");
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    color: white;
+    padding: 5px;
+}
+
+/*Estilo header*/
+
+.membrete{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    color: white;
+}
+
+.solapa_header{
+    background-color: rgb(192, 18, 18);
+    text-align: center;
+    color: white;
+
+}
+.icono_whatsaap{
+    display: inline-block;
+    position: fixed;
+    left: 97%;
+    top: 1%;
+
+}
+.menu_lista{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 15px;
+}
+
+.logo_header{
+    height: 40px;
+    margin-right: 10px;
+
+}
+.menu_lista_items{
+    list-style-type:none;
+
+}
+
+.menu_lista_items_a{
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    border: 1px solid white;
+    transition: all 1s;
+    
+}
+.menu_lista_items_a:hover{
+    background-color: white;
+    color: black;
+}
+
+/* estilo footer*/
+.menufooter_lista{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.menufooter_lista_items{
+    list-style-type: none;
+}
+
+.menufooter_lista_items_a{
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+    padding: 2px;
+    border: 1px solid white;
+    transition: all 1s;
+}
+.menufooter_lista_items_a:hover{
+    background-color: white;
+    color: black;
+}
+
+.footercopyright{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.redesypagos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.redes{
+    text-align: center;
+}
+
+/*estilo aside*/
+.fondo aside{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
+
+.imagen_aside{
+    
+}
+
+
+/*estilo main especifico para el index*/
+.productosdestacados_titulo{
+    text-align: center;
+    margin: 2%;
+    font-size: 40px;
+}
+.productosdestacados_contenido{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto;
+    grid-row-gap:  50px;
+}
+.beneficios{
+    margin: 10%;
+}
+
+.beneficios_titulo{
+    text-align: center;
+    margin-bottom: 3%;
+}
+.beneficios_contenido{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-template-rows: auto;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+}
+
+.productosdestacados_contenido_articulos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+.imagen_beneficios{
+    text-align: center;
+}
+.div_beneficios{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.contenido_informativo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5%;
+    border: 1px solid black;
+    padding: 2%;
+
+}
+.contenido_informativo_titulo{
+    margin: 2%;
+}
+
+/*estilo pagina de contacto*/
+.contacto_online{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+.contacto_online_it{
+    margin-top: 20px;
+    
+}
+
+/*estilo pagina nosotros*/
+
+.main_nosotros_imagen{
+    width: 350px;
+    margin-bottom: 10%;
+
+}
+
+.contenido_nosotros{
+    margin: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.nosotros_Texto{
+    text-align: justify ;
+    line-height: 1.5;
+}
+
+/*estilo página contenido*/
+.main_contenido{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 2%;
+}
+
+.article_contenido{
+    margin-bottom: 2%;
+}
+
+/*estilo pagina productos*/
+
+.logo_budeguer{
+    width: 150px;
+}
+
+.productos_budeguer{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+    border: 1px solid black;
+  
+}
+.productos_budeguer_items{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+
+}
+.productos_budeguer_producto{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 1px solid black;
+
+}
+
+.productos_luigi{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+    border: 1px solid black;
+
+}
+
+.productos_luigi_producto{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 1px solid black;
+}
+
+.productos_luigi_items{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.main_productos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 2%;
+}
+.display_none_desktop{
+    display: none;
+}
+
+}
+
+@media screen and (max-width: 480px ){
+    .contenedor{
+        grid-template-columns: auto;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas: "header" "main" "aside" "footer";
+        grid-gap: 5px;
+        font-size: 12px;
+    }
+    .header{
+        background-image: url("../imagenes/fondo.png");
+        color: white;
+    }
+    .membrete{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .solapa_header{
+        background-color: rgb(192, 18, 18);
+        color: white;
+        text-align: center;
+    }
+
+    .logo_header{
+        width: 100px;
+        margin-bottom: 10px;
+    }
+
+    .menu{
+        padding-left: 15px;
+        border: 1px solid white;
+    }
+
+    .menu_lista{
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around;
+    }
+
+    .menu_lista_items{
+        list-style-type: none;
+    }
+
+    .menu_lista_items_a{
+        text-decoration: none;
+        color: white;
+    }
+    
+
+    .main{
+        background-color: white;
+        
+    }
+    .productosdestacados{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 50px;
+    }
+
+    .productosdestacados_contenido_articulos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .beneficios_titulo{
+        margin-bottom: 10px;
+    }
+    .beneficios, .beneficios_contenido{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .contenido_informativo{
+        margin-top: 40px;
+        border: 0.5px solid black;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .contenido_informativo_parrafo{
+        text-align: center;
+    }
+    .display_none{
+        display: none;
+    }
+    
+    .aside{
+      text-align: center;
+      background-image: linear-gradient(red,black);
+    }
+    .imagen_aside{
+        height: 200px;
+        transform: rotate(-90deg);
+
+    }
+    
+    .footer{
+        background-image: url("../imagenes/fondo.png");
+        color: white;
+        display: flex;
+        flex-direction: column;
+        
+    }
+
+    .menufooter{
+        order: 2;
+    }
+
+    .redesypagos{
+        order: 1;
+        text-align: center;
+        margin-bottom: 5px;
+    }
+
+    .menufooter{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        margin-bottom: 10px;
+    }
+    .menufooter_lista_items{
+        list-style-type: none;
+    }
+    .horarios{
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+    }
+    .menufooter_lista_items_a{
+        color: white;
+    }
+    .footercopyright{
+        order: 3;
+    }
+    .footercopyright{
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    /* estilo pagina nosotros para celulares*/
+    .main_nosotros_imagen{
+        width: 150px;
+    }
+    .contenido_nosotros{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 8px;
+    }
+    .nosotros_Texto{
+        text-align: justify;
+    }
+    /* estilo pagina contenido para celulares*/
+
+ .article_contenido{
+    margin: 8px;
+ }
+
+ .contacto_online_it{
+     margin: 10px;
+     text-align: justify;
+ }
+/*estilo pagina productos para celulares*/
+
+.logo_budeguer{
+    width: 150px;
+}
+.productos_budeguer{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+    border: 1px solid black;
+  
+}
+.productos_budeguer_items{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+
+}
+.productos_budeguer_producto{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 1px solid black;
+
+}
+
+.productos_luigi{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto;
+    border: 1px solid black;
+
+}
+
+.productos_luigi_producto{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    border: 1px solid black;
+}
+
+.productos_luigi_items{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.main_productos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 2%;
+}
+
+.centrar_para_celulares{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+}
